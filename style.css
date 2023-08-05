@@ -1,27 +1,385 @@
-/* Global changes*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); * {
+    font-family: "Work Sans", sans-serif;
 }
-.container{
-    width: 1370px;
-    margin: 0 auto;
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
 }
-img{
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+img {
     max-width: 100%;
 }
-a{
-    text-decoration: none;
+
+.header {
+    background: rgb(0, 0, 0);
+    padding: 5px 0px;
 }
-.clearfix::after{
+
+.headerLogo img {
+    width: 160px;
+}
+
+.headerMenu ul {
+    text-align: right;
+}
+
+.headerMenu ul li {
+    position: relative;
+}
+
+.headerMenu ul li a {
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 25px;
+    font-size: 25px;
+    margin-top: 17px;
+}
+
+.headerMenu ul li:hover > a {
+    color: rgb(196, 190, 190);
+}
+
+.drop {
+    position: absolute;
+    top: 150%;
+    left: 0px;
+    width: 258px;
+    padding-left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+    transform: scaleY(0);
+    transform-origin: center top;
+    border-radius: 5px;
+    box-shadow: black 2px 4px 30px;
+    text-align: center !important;
+}
+
+.drop li a {
+    border-bottom: 1px solid black;
+    background: white;
+    padding: 15px 38px !important;
+    margin-top: 0px !important;
+    color: black !important;
+}
+
+.drop li a:hover {
+    background: black;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.headerMenu ul li:hover .drop {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+.banner {
+    background-image: url("image/banner picture.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 250px 0px;
+}
+
+.bannerText h1 {
+    font-size: 55px;
+    font-weight: 800;
+    margin: 20px 0px;
+}
+
+.bannerText h5 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.btn1 {
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+}
+
+.btn1:hover {
+    background: white;
+    color: black;
+}
+
+.btn2 {
+    background: white;
+    padding: 17px 30px;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 600;
+    border: navajowhite;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s;
+}
+
+.btn2:hover {
+    color: white;
+    background: black;
+}
+
+.about {
+    background: rgb(135, 164, 113);
+    padding: 70px 0px;
+    text-align: center;
+}
+
+.abotHeader h1 {
+    color: rgb(232, 223, 218);
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: -40px;
+    position: relative;
+}
+
+.abotHeader h1::after {
     content: "";
-    display: block;
-    clear: both;
+    top: 100%;
+    left: 0px;
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background: rgb(232, 223, 218);
+    right: 0px;
+    margin: 0px auto;
 }
-.left{
-    float: left;
+
+.aboutText p {
+    color: rgb(232, 223, 218);
+    text-align: left;
+    margin-top: 90px;
 }
-.right{
-    float: right;
+
+.aboutImag {
+    width: 30%;
+    margin-left: 120px;
+    margin-top: 50px;
+    position: relative;
+}
+.aboutImag::before{
+    content: "";
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background: rgba(135, 164, 113, 0.6);
+   opacity: 0;
+   visibility: hidden;
+    transition: .8s;
+}
+.aboutImag:hover.aboutImag::before{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.aboutImag img {
+    width: 100%;
+}
+.jillur{
+    position: absolute;
+    top: 70%;
+    left: 37%;
+    width: 124px;
+    height: auto;
+    background: purple;
+    color: cyan;
+    border-radius: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+.aboutImag:hover.jillur{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.jillur h1{
+    font-size: 40px;
+}
+.sercice {
+    background: rgb(96, 106, 100);
+    padding: 50px 0px;
+    color: rgb(227, 218, 213);
+}
+
+.service1 {
+    text-align: center;
+}
+
+.service1 h1 {
+    position: relative;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.service1 h1::after {
+    content: "";
+    top: 100%;
+    left: 0px;
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background: rgb(232, 223, 218);
+    right: 0px;
+    margin: 0px auto;
+}
+
+.service1 h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.service1 p {
+    width: 60%;
+    margin: 20px auto 50px;
+}
+
+.service2 {
+}
+
+.service2 i {
+    color: rgb(0, 186, 153);
+    font-size: 50px;
+    padding: 30px 0px 0px 40px;
+}
+
+.service2 h2 {
+    font-size: 35px;
+    font-weight: 400;
+    padding-top: 30px;
+    margin-left: -10%;
+}
+
+.service2 p {
+    font-size: 19px;
+    font-weight: 400;
+    margin-left: -10%;
+}
+
+.work {
+    background: rgb(135, 164, 113);
+    padding: 100px 0px;
+}
+
+.work1 {
+    text-align: center;
+    color: white;
+}
+
+.work1 h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.work1 p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.work2 {
+    border: 2px solid white;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.work img {
+    width: 100%;
+}
+
+.work2 p {
+    color: rgb(92, 118, 128);
+    font-size: 23px;
+    margin-bottom: -3px;
+}
+
+.work2 span {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.team {
+    background: rgb(91, 151, 118);
+    padding: 50px 0px;
+    color: white;
+    text-align: center;
+}
+
+.teamtext h1 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.teamtext h1::after {
+    content: "";
+    top: 100%;
+    left: 0px;
+    position: absolute;
+    width: 41%;
+    height: 3px;
+    background: white;
+    right: 0px;
+    margin: 0px auto;
+}
+.teamall img{
+    position: relative;
+}
+
+.teamall img {
+    width: 95%;
+}
+
+.teamall a {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    padding: 0px 5px;
+}
+
+.teamall a:hover {
+    color: red;
+    transform: scale(1.4);
+}
+
+.topFooter {
+    background: rgb(96, 106, 100);
+    padding: 100px 0px;
+    color: white;
+}
+
+.top {
+}
+
+.top h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.top p {
+    width: 65%;
+    margin: 0px auto 20px;
+    font-size: 17px;
+    font-weight: 300;
 }
