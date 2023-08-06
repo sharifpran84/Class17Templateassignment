@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); * {
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
     font-family: "Work Sans", sans-serif;
 }
 
@@ -172,48 +173,46 @@ img {
     margin-top: 50px;
     position: relative;
 }
-.aboutImag::before{
+.aboutImag::before {
     content: "";
     right: 0;
     top: 0;
     width: 0;
     height: 100%;
     position: absolute;
-    background: rgba(135, 164, 113, 0.6);
-   opacity: 0;
-   visibility: hidden;
-    transition: .8s;
+    background: rgba(135, 164, 113, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
 }
-.aboutImag:hover.aboutImag::before{
+.aboutImag:hover.aboutImag::before {
     opacity: 1;
     visibility: visible;
     width: 100%;
 }
-.aboutImag img {
-    width: 100%;
-}
-.jillur{
+.aboutImag::after {
+    content: "Jillur";
     position: absolute;
     top: 70%;
     left: 37%;
-    width: 124px;
+    width: 130px;
     height: auto;
     background: purple;
     color: cyan;
     border-radius: 80%;
+    font-size: 34px;
     opacity: 0;
     visibility: hidden;
-    transform: scaleY(0);
-    transform-origin: top center;
+    transition: 0.8s;
 }
-.aboutImag:hover.jillur{
+.aboutImag:hover.aboutImag::after {
     opacity: 1;
     visibility: visible;
-    transform: scaleY(1);
 }
-.jillur h1{
-    font-size: 40px;
+.aboutImag img {
+    width: 100%;
 }
+
 .sercice {
     background: rgb(96, 106, 100);
     padding: 50px 0px;
@@ -252,10 +251,6 @@ img {
     width: 60%;
     margin: 20px auto 50px;
 }
-
-.service2 {
-}
-
 .service2 i {
     color: rgb(0, 186, 153);
     font-size: 50px;
@@ -342,12 +337,30 @@ img {
     right: 0px;
     margin: 0px auto;
 }
-.teamall img{
+.teamimg {
     position: relative;
+    width: 385px;
+    height: auto;
 }
-
-.teamall img {
-    width: 95%;
+.teamimg::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(135, 164, 113, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+}
+.teamimg:hover.teamimg::before {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.teamimg img {
+    width: 100%;
 }
 
 .teamall a {
@@ -366,9 +379,6 @@ img {
     background: rgb(96, 106, 100);
     padding: 100px 0px;
     color: white;
-}
-
-.top {
 }
 
 .top h1 {
